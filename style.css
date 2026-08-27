@@ -1,0 +1,78 @@
+:root {
+  --bg: #faf7f2;
+  --card: #ffffff;
+  --text: #241a2e;
+  --muted: #6f6480;
+  --primary: #9333ea;
+  --primary-dark: #7e22ce;
+  --accent: #ec4899;
+  --border: #eadfe8;
+  --radius: 12px;
+  --shadow: 0 1px 3px rgba(36, 26, 46, .08);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Microsoft JhengHei", "PingFang TC", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.75;
+}
+
+.site-header { background: var(--card); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 10; }
+.nav-inner { max-width: 920px; margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; gap: 14px; }
+.logo { font-weight: 800; font-size: 1.08rem; color: var(--text); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+.logo .mark { color: var(--accent); }
+.nav-links { display: flex; gap: 4px; flex-wrap: wrap; margin-left: auto; }
+.nav-links a { color: var(--muted); text-decoration: none; font-size: .88rem; padding: 6px 10px; border-radius: 8px; }
+.nav-links a:hover { color: var(--text); background: #f5edf3; }
+
+#hero { background: linear-gradient(135deg, #f7e8f7 0%, #f3eaf6 100%); border-bottom: 1px solid var(--border); text-align: center; padding: 36px 16px 30px; }
+#hero h1 { margin: 0 0 8px; font-size: clamp(1.5rem, 4.5vw, 2.1rem); }
+.hero-sub { max-width: 640px; margin: 0 auto 14px; color: #463a52; font-size: .95rem; }
+.badges { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.badge { font-size: .8rem; color: var(--primary-dark); background: #eeddf7; border-radius: 999px; padding: 4px 13px; }
+
+main { max-width: 920px; margin: 24px auto 44px; padding: 0 16px; }
+
+.toc { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 20px; margin-top: 18px; }
+.toc h2 { margin: 0 0 8px; font-size: 1rem; }
+.toc-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.toc-links a { font-size: .86rem; color: var(--primary); text-decoration: none; background: #f5edf7; padding: 4px 12px; border-radius: 999px; }
+
+section.category { margin-top: 30px; }
+section.category > h2 { font-size: 1.25rem; border-left: 4px solid var(--accent); padding-left: 12px; margin-bottom: 4px; }
+section.category > p.cat-desc { color: var(--muted); font-size: .88rem; margin: 0 0 14px; }
+
+.tmpl { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin-bottom: 14px; box-shadow: var(--shadow); }
+.tmpl h3 { margin: 0 0 4px; font-size: 1.05rem; }
+.tmpl .use { color: var(--muted); font-size: .84rem; margin: 0 0 12px; }
+.tmpl pre {
+  background: #2d2438; color: #f3edf7; padding: 14px 16px; border-radius: 10px;
+  white-space: pre-wrap; font-size: .88rem; line-height: 1.8; font-family: "Cascadia Code", Consolas, monospace;
+  position: relative;
+}
+.tmpl .copy-btn { position: absolute; top: 8px; right: 8px; background: rgba(255,255,255,.12); color: #fff; border: none; border-radius: 6px; padding: 4px 10px; font-size: .76rem; cursor: pointer; }
+.tmpl .copy-btn:hover { background: rgba(255,255,255,.25); }
+.vars { margin: 10px 0 0; font-size: .84rem; color: #4b3f58; }
+.vars strong { color: var(--accent); }
+.tip { margin: 8px 0 0; font-size: .82rem; color: var(--muted); }
+.tip::before { content: "💡 "; }
+
+.notice { background: #fdf6ec; border: 1px solid #f0dcc0; border-radius: 10px; padding: 12px 16px; font-size: .84rem; color: #7c5a1e; margin-top: 20px; }
+.notice a, .page a { color: var(--primary); }
+
+.page { max-width: 760px; margin: 32px auto 48px; padding: 0 16px; }
+.page h1 { font-size: 1.5rem; margin-bottom: 4px; }
+.page-date { color: var(--muted); font-size: .82rem; margin-bottom: 22px; }
+.page h2 { font-size: 1.12rem; margin-top: 28px; border-left: 4px solid var(--accent); padding-left: 10px; }
+.page p, .page li { font-size: .95rem; color: #3c3245; }
+.page ul { padding-left: 22px; }
+
+footer { border-top: 1px solid var(--border); background: var(--card); margin-top: 30px; }
+.footer-inner { max-width: 920px; margin: 0 auto; padding: 24px 16px; display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.footer-links { display: flex; gap: 14px; flex-wrap: wrap; margin-left: auto; }
+.footer-links a { color: var(--muted); text-decoration: none; font-size: .86rem; }
+.footer-note { width: 100%; color: var(--muted); font-size: .76rem; }
